@@ -1,0 +1,16 @@
+version: '3'
+services:
+  tarin:
+    image: rahamshaik/phonepaytrain:v1
+    ports:
+      - "8000:80"
+
+  movie:
+    image: rahamshaik/phonepaymovie:v1
+    ports:
+      - "8001:80"
+
+  recharge:
+    image: rahamshaik/phonepayrecharge:v1
+    ports:
+      - "8002:80"
