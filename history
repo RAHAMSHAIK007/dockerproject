@@ -1,0 +1,59 @@
+   1  yum install docker -y
+    2  systemctl start docker
+    3  systemctl status docker
+    4  docker swarm init --advertise-addr 172.31.35.58
+    5  docker node ls
+    6  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    7  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    8  amazon-linux-extras install java-openjdk11 -y
+    9  yum install git maven jenkins -y
+   10  systemctl start jenkins.service
+   11  systemctl status jenkins.service
+   12  vim Dockerfile
+   13  vim index.html
+   14  docker build -t phonepaytrain:v1 .
+   15  vim index.html
+   16  docker build -t phonepaymovie:v1 .
+   17  docker images
+   18  vim index.html
+   19  docker build -t phonepayrecharge:v1 .
+   20  docker images
+   21  docker tag phonepayrecharge:v1 rahamshaik/phonepayrecharge:v1
+   22  docker tag phonepaymovie:v1 rahamshaik/phonepaymovie:v1
+   23  docker tag phonepaytrain:v1 rahamshaik/phonepaytrain:v1
+   24  docker images
+   25  docker login
+   26  docker images
+   27  docker push rahamshaik/phonepayrecharge
+   28  docker push rahamshaik/phonepayrecharge:v1
+   29  docker push rahamshaik/phonepaymovie:v1
+   30  docker push rahamshaik/phonepaytrain:v1
+   31  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   32  sudo chmod +x /usr/local/bin/docker-compose
+   33  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+   34  docker-compose --version
+   35  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   36  sudo chmod +x /usr/local/bin/docker-compose
+   37  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+   38  docker-compose --version
+   39  vim docker-compose.yml
+   40  ll
+   41  git .
+   42  git init .
+   43  git add *
+   44  git commit -m "raham commits" *
+   45  git remote add origin https://github.com/RAHAMSHAIK007/dockerproject.git
+   46  git push origin master
+   47  git status
+   48  git log
+   49  git push origin master
+   50  yum remove git* -y
+   51  yum install git -y
+   52  chmod 777 /var/run/docker.sock
+   53  systemctl reload-daemon
+   54  systemctl daemon-reload
+   55  systemctl restart docker
+   56  docker stack ls
+   57  docker stack ps phonepay
+   58  docker images
+   59  history
